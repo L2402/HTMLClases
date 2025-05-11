@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Dashboard</title>
+  <!-- Desde CDN o tu archivo Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+
+  <!-- Encabezado -->
+  <header class="flex items-center justify-between p-4 bg-white shadow" role="banner">
+    <div class="flex items-center space-x-3">
+      <!-- Logo -->
+      <div class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center font-bold text-white">
+        logo
+      </div>
+      <!-- Nombre -->
+      <h1 class="text-xl font-bold text-gray-800">Mi Portafolio</h1>
+    </div>
+  </header>
+
+  <!-- Container principal con sidebar y contenido -->
+  <div class="flex flex-1">
+    <!-- Menú lateral (sidebar) -->
+    <aside class="w-64 bg-gray-200 p-4" aria-label="Menú de navegación">
+      <nav class="space-y-4">
+        <a href="#sobre-mi" class="block text-gray-700 hover:bg-gray-300 p-2 rounded">Sobre Mí</a>
+        <a href="#proyectos" class="block text-gray-700 hover:bg-gray-300 p-2 rounded">Proyectos</a>
+        <a href="#certificados" class="block text-gray-700 hover:bg-gray-300 p-2 rounded">Certificados</a>
+        <a href="#contacto" class="block text-gray-700 hover:bg-gray-300 p-2 rounded">Contacto</a>
+      </nav>
+    </aside>
+
+    <!-- Sección principal -->
+    <main class="flex-1 p-6 grid gap-6" id="principal">
+      
+      <!-- Bloques contenidos distribuidos en grid -->
+      <section class="grid md:grid-cols-3 gap-4" role="region" aria-labelledby="bloques">
+        <div class="bg-white p-4 rounded shadow" id="sobre-mi">
+          <h2 class="text-lg font-semibold mb-2">Sobre Mí</h2>
+          <p class="text-gray-700">Desarrollador en Ptyhon y SQL, me centro en el backend y tengo 3 años trabajando con python</p>
+          <p class="text-gray-700">Enlace de mi hoja de vida</p>
+          <ul>
+            <li><a href="https://github.com/L2402/Proyectos/blob/main/HOJA%20DE%20VIDA.docx" class="text-blue-600 hover:underline">Aqui.</a></li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded shadow" id="proyectos">
+          <h2 class="text-lg font-semibold mb-2">Proyectos</h2>
+          <!-- Enlaces a mis proyectos creados el semestre pasado -->
+          <ul class="list-disc list-inside">
+            <li><a href="https://github.com/L2402/Proyectos/blob/f340a4fd19d7d0d60f31687c4e15d19b4c3a9de2/DARApp.rar" class="text-blue-600 hover:underline">Proyecto reproductor de musica llamada "DAR" </a></li>
+            <li><a href="https://github.com/L2402/Proyectos/blob/5b0a0c16e37541120b15ba5355b273611509ff77/Intercine.rar" class="text-blue-600 hover:underline">Proyecto intercine</a></li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded shadow" id="certificados">
+          <h2 class="text-lg font-semibold mb-2">Certificados</h2>
+            <ul>
+              <li><a href="https://github.com/L2402/Proyectos/blob/18a5ddefa9feb3d89ac606a99d8759f7261874f6/DISCIPLINA%20EN%20EL%20TRABAJO.pdf" class="text-blue-600 hover:underline">Disciplina en el trabajo</a></li>
+              <li><a href="https://github.com/L2402/Proyectos/blob/18a5ddefa9feb3d89ac606a99d8759f7261874f6/PROTOCOLOS%20DE%20ATENCION%20Y%20SERVICIO.pdf" class="text-blue-600 hover:underline">Protocolos de atención y servicios</a></li>
+              <li><a href="https://github.com/L2402/Proyectos/blob/18a5ddefa9feb3d89ac606a99d8759f7261874f6/RELACIONES%20PROFESIONALES.pdf" class="text-blue-600 hover:underline">RELACIONES PROFESIONALES</a></li>
+              <li><a href="https://github.com/L2402/Proyectos/blob/18a5ddefa9feb3d89ac606a99d8759f7261874f6/REPRESENTANTE%20TELEFONICO.pdf" class="text-blue-600 hover:underline">REPRESENTANTE TELEFONICO</a></li>
+              <li><a href="https://github.com/L2402/Proyectos/blob/18a5ddefa9feb3d89ac606a99d8759f7261874f6/SERVICIO%20AL%20CLIENTE.pdf" class="text-blue-600 hover:underline">SERVICIO AL CLIENTE</a></li>
+              <li><a href="https://github.com/L2402/Proyectos/blob/18a5ddefa9feb3d89ac606a99d8759f7261874f6/TECNICO%20EN%20REPARACION%20DE%20LAPTOPS.pdf" class="text-blue-600 hover:underline">TÉCNICO EN REPARACION DE LAPTOPS</a></li>
+            </ul>
+        </div>
+      </section>
+
+      <!-- Formulario y filtro -->
+      <section class="grid md:grid-cols-2 gap-4" role="region" aria-labelledby="formularios">
+        <!-- Formulario de contacto -->
+        <form class="bg-white p-4 rounded shadow" id="contacto" aria-label="Formulario de contacto">
+          <h3 class="text-lg font-semibold mb-3">Contacto</h3>
+          <label class="block mb-2 text-sm font-medium text-gray-700">Nombre:</label>
+          <input type="text" class="w-full border border-gray-300 p-2 rounded mb-3" placeholder="Tu nombre" />
+          <label class="block mb-2 text-sm font-medium text-gray-700">Email:</label>
+          <input type="email" class="w-full border border-gray-300 p-2 rounded mb-3" placeholder="tu.email@example.com" />
+          <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" type="submit">Enviar</button>
+        </form>
+
+        <!-- Filtro de datos -->
+        <div class="bg-white p-4 rounded shadow" id="filtro">
+          <h3 class="text-lg font-semibold mb-2">Filtro de datos</h3>
+          <input type="text" placeholder="Buscar proyectos" class="w-full border border-gray-300 p-2 rounded" />
+          <!-- Aquí puedes agregar scripts para filtrar, si quieres -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-white p-4 text-center text-gray-600" role="contentinfo">
+    <p>Contacto: jeremyrevi94@gmail.com | Tel: +593 958877987</p>
+  </footer>
+
+</body>
+</html>
