@@ -1,0 +1,16 @@
+{
+  "name": "ts-fundamentos-reyesvinces",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
